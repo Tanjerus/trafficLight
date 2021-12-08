@@ -19,6 +19,9 @@ class ViewController: UIViewController {
         redLightView.layer.cornerRadius = 75
         yelowLightView.layer.cornerRadius = 75
         greenLightView.layer.cornerRadius = 75
+        redLightView.alpha = 0.3
+        yelowLightView.alpha = 0.3
+        greenLightView.alpha = 0.3
     }
 
     @IBAction func startPressed() {
