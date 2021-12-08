@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,32 +13,32 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="trafficLight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gzi-gb-9P6">
-                                <rect key="frame" x="132" y="129" width="126" height="126"/>
+                                <rect key="frame" x="132" y="129" width="150" height="150"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="gzi-gb-9P6" secondAttribute="height" multiplier="1:1" id="GnS-PQ-h7l"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jfs-Yh-SHq">
-                                <rect key="frame" x="132" y="308" width="126" height="126"/>
+                                <rect key="frame" x="132" y="332" width="150" height="150"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Jfs-Yh-SHq" secondAttribute="height" multiplier="1:1" id="mUY-C9-nIj"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SaS-hZ-YJ2">
-                                <rect key="frame" x="132" y="494" width="126" height="126"/>
+                                <rect key="frame" x="132" y="542" width="150" height="150"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="SaS-hZ-YJ2" secondAttribute="height" multiplier="1:1" id="L0u-7r-mrE"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iqd-8z-ePN">
-                                <rect key="frame" x="132" y="709" width="126" height="36"/>
+                                <rect key="frame" x="132" y="781" width="150" height="43"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="iqd-8z-ePN" secondAttribute="height" multiplier="150:43" id="0Iw-e6-d9e"/>
@@ -47,6 +47,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Start">
                                     <color key="baseForegroundColor" systemColor="secondarySystemBackgroundColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="startPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="48n-kB-30x"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -66,6 +69,12 @@
                             <constraint firstItem="Jfs-Yh-SHq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="132" id="ouh-Hd-fer"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenLightView" destination="SaS-hZ-YJ2" id="W5G-So-6PF"/>
+                        <outlet property="redLightView" destination="gzi-gb-9P6" id="nPa-A2-REu"/>
+                        <outlet property="startButton" destination="iqd-8z-ePN" id="wyo-F3-Vn4"/>
+                        <outlet property="yelowLightView" destination="Jfs-Yh-SHq" id="TO8-1v-3vi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
